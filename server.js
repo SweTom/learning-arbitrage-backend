@@ -8,9 +8,10 @@ app.use(cors());
 app.use(express.json());
 
 // Test-route
-app.get('/', (req, res) => {
-    res.send('Backend is working!');
+app.get('/api/test', (req, res) => {
+    res.json({ message: "Backend is working!" });
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
